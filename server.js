@@ -21,7 +21,15 @@ var path = require('path');
 // you require from the folder/files location in your application. 
 // We will see more of this type of require in subsequent sections.
 var indexRouter = require('./routes/index');
-var productsRouter = require('./routes/products');
+// var productsRouter = require('./routes/products');
+// var categoriesRouter = require('./routes/categories');
+// var customersRouter = require('./routes/customers');
+// var optionsRouter = require('./routes/options');
+// var order_detailsRouter = require('./routes/order_details');
+// var ordersRouter = require('./router/orders');
+// var product_categoriesRouter = require('./router/product_categories');
+// var product_optionsRouter = require('./router/product_options');
+
 // on line 27
 // I created an instance of my express server and I assigned it to a variable called server.
 var server = express();
@@ -46,7 +54,15 @@ server.use(express.static(path.join(__dirname, 'public')));
 // ( index page as seen in the view folder is one of the front end files).
 // The root page of application is the route without any name after it.
 server.use('/', indexRouter);
-server.use('/product', productsRouter);
+// server.use('/products', productsRouter);
+// server.use('/categories', categoriesRouter);
+// server.use('/customers', customersRouter);
+// server.use('/options', optionsRouter);
+// server.use('/order_details', order_detailsRouter);
+// server.use('/orders', ordersRouter);
+// server.use('/product_categorie', product_categoriesRouter);
+// server.use('/product_options', product_optionsRouter);
+
 
 // catch 404 and forward to error handler
 // on line 52 - 54 - I used my createError function here for my 404 error.
