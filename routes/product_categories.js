@@ -5,6 +5,8 @@ var router = express.Router();
 var product_categoriesController = require('../controllers/product_categoriesController');
 
 // when users visit /product_categories go to product_categories controller
+router.get('/',product_categoriesController.index);
+
 router.get('/product_categories', product_categoriesController.productCategories_get);
 
 module.exports = router;
