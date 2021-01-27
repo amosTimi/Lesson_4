@@ -5,6 +5,7 @@ var router = express.Router();
 var ordersController = require('../controllers/ordersController');
 
 // when users visit /options go to options controller
+router.get('/', ordersController.index);
 router.get('/orders', ordersController.orders_get);
 
 module.exports = router;
